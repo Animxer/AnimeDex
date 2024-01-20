@@ -32,7 +32,7 @@ class Anime:
 
 
 def get_GPage(page):
-    url = f'https://gogoanime.bid/?page={str(page)}'
+    url = f'https://anitaku.to/?page={str(page)}'
     soup = bs(requests.get(url).content, 'html.parser')
     div = soup.find('ul', 'items')
     animes = div.find_all('li')
